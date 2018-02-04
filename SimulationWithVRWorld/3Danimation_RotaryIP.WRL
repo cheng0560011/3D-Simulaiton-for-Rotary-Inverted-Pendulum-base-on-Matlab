@@ -1,0 +1,231 @@
+#VRML V2.0 utf8
+# Created with V-Realm Builder v2.0
+# Integrated Data Systems Inc.
+# www.ids-net.com
+
+DEF degree45 Viewpoint {
+  description ""
+  position -20 20 55
+  orientation -1 -1 -0.2 0.5
+  fieldOfView 0.6854
+}
+DEF column1 Transform {
+  translation 5 -7 5
+  children Shape {
+    appearance Appearance {
+      material Material {
+      }
+    }
+    geometry Cylinder {
+      radius 0.7
+      height 13.5
+    }
+  }
+}
+DEF column2 Transform {
+  translation -5 -7 5
+  children Shape {
+    appearance Appearance {
+      material Material {
+      }
+    }
+    geometry Cylinder {
+      radius 0.7
+      height 13.5
+    }
+  }
+}
+DEF column3 Transform {
+  translation -5 -7 -5
+  children Shape {
+    appearance Appearance {
+      material Material {
+      }
+    }
+    geometry Cylinder {
+      radius 0.7
+      height 13.5
+    }
+  }
+}
+DEF column4 Transform {
+  translation 5 -7 -5
+  children Shape {
+    appearance Appearance {
+      material Material {
+      }
+    }
+    geometry Cylinder {
+      radius 0.7
+      height 13.5
+    }
+  }
+}
+DEF motor Transform {
+  translation -0.000312805 -3.84989 0
+  children Shape {
+    appearance Appearance {
+      material Material {
+        diffuseColor 0.5 0.5 0.5
+      }
+    }
+    geometry Cylinder {
+      radius 2.5
+      height 7
+    }
+  }
+}
+DEF connect1 Transform {
+  translation 0 0.5 0
+  children Shape {
+    appearance Appearance {
+      material Material {
+        diffuseColor 0.5 0.5 0.5
+      }
+    }
+    geometry Cylinder {
+      radius 0.3
+      height 1
+    }
+  }
+}
+DEF UpperCap Transform {
+  translation -2.86102e-06 -0.350009 0.00066185
+  bboxCenter 0 0 -3
+  children Shape {
+    appearance Appearance {
+      material Material {
+        diffuseColor 0.2 0.2 0.2
+      }
+    }
+    geometry Box {
+      size 12 0.6 12
+    }
+  }
+}
+DEF LowerCap Transform {
+  translation 0 -14 0
+  bboxCenter 0 0 -3
+  children Shape {
+    appearance Appearance {
+      material Material {
+        diffuseColor 0.2 0.2 0.2
+      }
+    }
+    geometry Box {
+      size 12 2 12
+    }
+  }
+}
+Background {
+  skyColor [
+    0 0 0,
+    0.2778 0.21978 0.7,
+    0.22255 0.39023 0.7,
+    0.4 1 0.6 
+  ]
+  skyAngle [0.1, 1.2, 1.57]
+  groundColor [
+    1 1 1,
+    0.8 1 0.8,
+    0.8 1 0.8,
+    0.2 1 0.6 
+  ]
+  groundAngle [0.9, 1.5, 1.57]
+}
+DEF rod Transform {
+  translation 0 0.6 7.9999
+  center 0 0 -7.5
+  children [
+    Shape {
+      appearance Appearance {
+        material Material {
+          diffuseColor 0 0 1
+        }
+      }
+      geometry Box {
+        size 0.9 0.7 16
+      }
+    }
+    DEF pendulum Transform {
+      translation 0 10 9.4
+      center 0 -7.1 0
+      children Shape {
+        appearance Appearance {
+          material Material {
+            diffuseColor 1 0.0423168 0.0626358
+          }
+        }
+        geometry Cylinder {
+          radius 0.4
+          height 15
+        }
+      }
+    }
+    DEF encoder_pl Transform {
+      translation -0.0004 1.5 8
+      children [
+        Shape {
+          appearance Appearance {
+            material Material {
+              diffuseColor 0 0 1
+            }
+          }
+          geometry Box {
+            size 3 3 0.2
+          }
+        }
+        DEF encoder_pl2 Transform {
+          translation 0 1.5 0
+          rotation 1 0 0 1.5708
+          children Shape {
+            appearance Appearance {
+              material Material {
+                diffuseColor 0 0 1
+              }
+            }
+            geometry Cylinder {
+              radius 1.5
+              height 0.2
+            }
+          }
+        }
+        DEF encoder_pend Transform {
+          translation 0 1.5 -1.5
+          rotation 1 0 0 1.5708
+          children [
+            Shape {
+              appearance Appearance {
+                material Material {
+                  diffuseColor 0 1 0
+                }
+              }
+              geometry Cylinder {
+                radius 1.5
+                height 3
+              }
+            }
+            DEF connecter2 Transform {
+              translation 0 2.5 0
+              children Shape {
+                appearance Appearance {
+                  material Material {
+                  }
+                }
+                geometry Cylinder {
+                  radius 0.2
+                  height 1.6
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+DEF Forward Viewpoint {
+  description ""
+  position 0 0 50
+  fieldOfView 1.0854
+}
